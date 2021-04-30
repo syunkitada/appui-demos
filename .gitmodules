@@ -1,0 +1,6 @@
+[submodule "note/src/appui"]
+	path = note/src/appui
+	url = git@github.com:syunkitada/appui.git
+[submodule "docs/src/appui"]
+	path = docs/src/appui
+	url = git@github.com:syunkitada/appui.git
