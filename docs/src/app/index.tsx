@@ -3,6 +3,7 @@ import data from "../appui/src/data";
 
 import readme_service from "./readme_service";
 import text_service from "./text_service";
+import table_service from "./table_service";
 
 class Provider implements IProvider {
     constructor() {
@@ -39,9 +40,9 @@ class Provider implements IProvider {
             Authority: {
                 Name: "Guest",
                 ServiceMap: {
-                    // Priorityが低いほうが優先度が高く、左メニューバーの一番上にくる
                     Readme: { Priority: 0 },
-                    Text: { Priority: 2 }
+                    Text: { Priority: 1 },
+                    Table: { Priority: 2 }
                 }
             }
         };
@@ -66,6 +67,9 @@ class Provider implements IProvider {
                 break;
             case "Text":
                 text_service.getServiceIndex(input);
+                break;
+            case "Table":
+                table_service.getServiceIndex(input);
                 break;
         }
     }

@@ -7,9 +7,36 @@ const data = {
 
 `
     },
+    Md: {
+        Text: `
+# Md Format
+
+## List
+
+- li1
+- li2
+  - li2.1
+  - li2.2
+- li3
+
+## Table
+
+| col1 | col2 |
+| --- | --- |
+| col1 | col2 |
+
+## Code
+
+\`\`\`
+code
+\`\`\`
+`
+    },
     Raw: {
         Text: `
-<h1>Basic Items</h1>
+<h1>Raw Format</h1>
+
+<p>このページはCssの表示確認にも利用しています</p>
 
 <h2>Headers</h2>
 <div style="background-color: #ccc;">
@@ -20,21 +47,8 @@ const data = {
 </div>
 
 <h2>Table</h2>
-`
-    },
-    Md: {
-        Text: `
-# Header1
 
-Text1
 
-## Header2
-
-Text2
-
-### Header3
-
-Text3
 `
     }
 };
@@ -56,23 +70,23 @@ function getIndex() {
             },
             {
                 Kind: "Pane",
-                Name: "RawText",
-                Views: [
-                    {
-                        Kind: "Text",
-                        DataKey: "Raw",
-                        DataFormat: "Raw"
-                    }
-                ]
-            },
-            {
-                Kind: "Pane",
-                Name: "MdText",
+                Name: "Md",
                 Views: [
                     {
                         Kind: "Text",
                         DataKey: "Md",
                         DataFormat: "Md"
+                    }
+                ]
+            },
+            {
+                Kind: "Pane",
+                Name: "Raw",
+                Views: [
+                    {
+                        Kind: "Text",
+                        DataKey: "Raw",
+                        DataFormat: "Raw"
                     }
                 ]
             }
