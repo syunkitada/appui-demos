@@ -36,18 +36,48 @@ code
         Text: `
 <h1>Raw Format</h1>
 
-<p>このページはCssの表示確認にも利用しています</p>
-
 <h2>Headers</h2>
-<div style="background-color: #ccc;">
+<hr />
 <h1 style="background-color: #aaa;">Header1</h1>
+<p>Text1</p>
+<hr />
+
 <h2 style="background-color: #aaa;" class="ignore-nav">Header2</h2>
+<p>Text2</p>
+<hr />
+
 <h3 style="background-color: #aaa;">Header3</h3>
+<p>Text3</p>
+<hr />
+
 <h4 style="background-color: #aaa;">Header4</h4>
-</div>
+<p>Text4</p>
+<hr />
 
 <h2>Table</h2>
+<table>
+  <thead>
+    <tr>
+      <th>col1</th><th>col2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>col1</td><td>col2</td>
+    </tr>
+  </tbody>
+</table>
 
+<h2>List</h2>
+<ul>
+    <li>li1</li>
+    <li>li2</li>
+</ul>
+
+<ol>
+    <li>li1</li>
+    <li>li2</li>
+</ol>
 
 `
     }
